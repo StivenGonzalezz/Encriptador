@@ -1,0 +1,91 @@
+/** Header **/
+.header{
+    width: 100%;
+    display: flex;
+    background: #2377e7;
+}
+.logo{
+    width: 6%;
+}
+.titulo{
+    text-align: end;
+    padding: 3% 5% 0 0;
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+    color: rgb(184, 184, 184);
+}
+
+/** Main **/
+
+body{
+    background:#2377e7;
+}
+
+.body{
+    display: flex;
+}
+
+.main{
+    margin: 1em 1em 1em 3em;
+    width: 65%;
+    height: 76vh;
+}
+
+.introductionText{
+    font-size: 25px ;
+    display: block;
+    padding-bottom: 1em;
+    color: rgb(71, 70, 70);
+}
+
+.input{
+    background:#2377e7;
+    border: none;
+    border-radius: 1em;
+    width: 100%;
+    height: 60vh;
+    resize: none;
+    font-size: 1.5em;
+    color: rgb(116, 115, 115);
+}
+
+.button{
+    border: 0px solid rgb(116, 115, 115);
+    border-radius: 0.5em;
+    background:#4388e2;
+    font-size: medium;
+    cursor: pointer;
+    margin: 1em 0.2em;
+    padding: 0.4em;
+    transition: 0.5s all;
+}
+.button:hover{
+    background-color: #5e9ae7;
+}
+
+.output{
+    color: rgb(116, 115, 115);
+    width: 20%;
+    margin: 1em 1em 1em 3em;
+}
+
+.result{
+    border: none;
+    border-radius: 1em;
+    width: 100%;
+    height: 60vh;
+    resize: none;
+    font-size: 1.5em;
+    cursor: default;
+    box-shadow: 10px 10px 10px 5px #000;
+    background:#5293e9;
+}
+
+/** Footer **/
+.copyright{
+    width: 100%;
+    padding-top: 2vh;
+    color: rgb(116, 115, 115);
+    font-size: 0.7em;
+}
