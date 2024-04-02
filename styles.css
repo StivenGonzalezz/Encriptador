@@ -1,28 +1,68 @@
 /** Header **/
 .header{
     width: 100%;
-    display: flex;
-    background: #2377e7;
+    display:flex;
 }
 .logo{
     width: 6%;
 }
 .titulo{
-    text-align: end;
+    
     padding: 3% 5% 0 0;
-    font-size: 25px;
     height: 100%;
     width: 100%;
-    color: rgb(184, 184, 184);
 }
+
+#container{
+    
+    background-color: #f8f8f8;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px #535353,
+                inset -4px -4px 6px #fff;
+    
+    border-radius: 25px;
+    margin-top: 3%;
+    margin-left: 82%;
+    cursor: pointer;
+}
+
+#container.active .toggle{
+    left: 40px;
+    background: linear-gradient(145deg, #d8d8d8, #535353);
+}
+
+.toggle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background: linear-gradient(145deg, #d8d8d8, #2377e7);
+    border-radius: 25px;
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8 #fff;
+    transition: 200ms all;
+}
+
 
 /** Main **/
 
 body{
+    width: 100%;
+    height: 100vh;
     background:#2377e7;
+    transition: 200ms all;
+}
+
+body.active{
+    background-color: #535353;
 }
 
 .body{
+    height: 85vh;
     display: flex;
 }
 
@@ -36,8 +76,15 @@ body{
     font-size: 25px ;
     display: block;
     padding-bottom: 1em;
-    color: rgb(71, 70, 70);
+    color: #474646;
+    transition: 200ms all;
 }
+
+.introductionText.active{
+    color: #0f0f0f;
+}
+
+
 
 .input{
     background:#2377e7;
@@ -47,7 +94,16 @@ body{
     height: 60vh;
     resize: none;
     font-size: 1.5em;
-    color: rgb(116, 115, 115);
+    transition: 200ms all;
+
+}
+
+.input::placeholder{
+    color: #2e2e2e;
+}
+
+.input.active{
+    background-color: #535353;
 }
 
 .button{
@@ -64,8 +120,17 @@ body{
     background-color: #5e9ae7;
 }
 
+.button.active{
+    background:#999a9c;
+}
+
+.button.active:hover{
+    background:#cacaca;
+
+}
+
+
 .output{
-    color: rgb(116, 115, 115);
     width: 20%;
     margin: 1em 1em 1em 3em;
 }
@@ -82,10 +147,17 @@ body{
     background:#5293e9;
 }
 
+
+.result.active{
+    background:#999a9c;
+}
+
 /** Footer **/
 .copyright{
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     padding-top: 2vh;
-    color: rgb(116, 115, 115);
+    color: #9c9c9c;
     font-size: 0.7em;
 }
