@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
     <title>EncriptadorAlura</title>
   </head>
 
@@ -20,20 +21,18 @@
 
     <div class="body">
       <div class="main">
-        <form action="">
           <label class="introductionText" for="inputText"
             >¿Que deseas encriptar?</label
           >
-          <textarea placeholder="Ingrese aqui su texto" class="input" name="inputText" id="" cols="30" rows="10"></textarea>
-          <button class="button">Encriptar</button>
-          <button class="button">Desencriptar</button>
-          <button class="button">Limpiar</button>
-        </form>
+          <textarea placeholder="Ingrese aqui su texto" class="input" name="inputText" id="textToEncrypt" cols="30" rows="10"></textarea>
+          <button id="encrypBtn" class="button">Encriptar</button>
+          <button id="decrypBtn" class="button">Desencriptar</button>
+          <button id="cleanBtn" class="button">Limpiar</button>
       </div>
 
       <div class="output">
         <label class="introductionText" for="result">Mensaje encriptado</label>
-        <textarea readonly class="result" name="inputText" id="" cols="30" rows="10"></textarea>
+        <textarea readonly class="result" name="inputText" id="encryptedResult" cols="30" rows="10"></textarea>
         <button class="button">Copiar</button>
       </div>
     </div>
@@ -45,7 +44,14 @@
       </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script>
+        var encrypButton = document.querySelector("#encrypBtn");
+        var decrypButton = document.querySelector("#decrypBtn");
+        var cleanButton = document.querySelector("#cleanBtn");
+        encrypButton.onclick = encrypt;
+        decrypButton.onclick = decrypt;
+        cleanButton.onclick = clean;
+    </script>
 
   </body>
 </html>
