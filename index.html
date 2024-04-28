@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js"></script>
     <title>EncriptadorAlura</title>
   </head>
 
   <body>
+    
     <header>
       <div class="header">
         <img class="logo" src="./images/logo.png" alt="Logo alura" />
@@ -33,24 +33,26 @@
       <div class="output">
         <label class="introductionText" for="result">Mensaje encriptado</label>
         <textarea readonly class="result" name="inputText" id="encryptedResult" cols="30" rows="10"></textarea>
-        <button class="button">Copiar</button>
+        <button id="copyButton" class="button">Copiar</button>
       </div>
     </div>
 
     <footer>
       <div class="copyright">
-        <p>Code by: StivenG</p>
         <p style="text-align: end">&copy Copyright Encriptador Alura 2024</p>
       </div>
     </footer>
 
+    <script src="main.js"></script>
     <script>
         var encrypButton = document.querySelector("#encrypBtn");
         var decrypButton = document.querySelector("#decrypBtn");
         var cleanButton = document.querySelector("#cleanBtn");
+        var copyButton = document.querySelector("#copyButton");
         encrypButton.onclick = encrypt;
         decrypButton.onclick = decrypt;
         cleanButton.onclick = clean;
+        copyButton.onclick = copy;
     </script>
 
   </body>

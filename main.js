@@ -1,11 +1,11 @@
-var toggle = document.getElementById('container');
+var toggle = document.getElementById('container')   
 var body = document.querySelector('body')
 var input = document.querySelector('.input')
 var result = document.querySelector('.result')
 var output = document.querySelector('.result')
 var introductionText = document.querySelectorAll('.introductionText')
 var button = document.querySelectorAll('.button')
-
+var textResult = document.getElementById('encryptedResult')
 
 toggle.onclick = function(){
     toggle.classList.toggle('active');
@@ -46,6 +46,11 @@ function decrypt(){
 }
 
 function clean(){
-    var limpiar = " "
-    document.getElementById('textToEncrypt').innerHTML = limpiar;
+    document.getElementById('textToEncrypt').value = "";
+    document.getElementById('encryptedResult').value = "";
+}
+
+function copy(){
+    textResult.select();
+    document.execCommand('copy');
 }
