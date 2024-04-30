@@ -161,3 +161,35 @@ body.active{
     color: #9c9c9c;
     font-size: 0.7em;
 }
+
+@media(max-width:1000px){
+
+    .body{
+        display: inline-block;
+    }
+
+    .main{
+        margin-left: 2em;
+        width: 100%;
+        height: 45vh;
+    }
+
+    .logo{
+        width: 5rem;
+    }
+
+    #container{ 
+        margin-top: 5%;
+        margin-left: 60%;
+    }
+
+    .input{
+        width: 80%;
+        height: 30vh;
+    }
+
+    .introductionText{
+        width: 100%;
+    }
+
+}

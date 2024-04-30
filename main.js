@@ -47,7 +47,6 @@ function decrypt(){
 
 function clean(){
     document.getElementById('textToEncrypt').value = "";
-    document.getElementById('encryptedResult').value = "";
 }
 
 function copy(){
